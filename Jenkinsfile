@@ -17,5 +17,17 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        stage('Scripting') {
+            steps {
+                script {
+                    if (2 + 2 != 4) {
+                        println("Nigdy tu nie wejde")
+                    }
+                    else {
+                        println("Brawo")
+                    }
+                }
+            }
+        }
     }
 }
